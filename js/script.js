@@ -1,12 +1,13 @@
 
 const words = ["Reliable", "Scalable", "Distributed"];
-const el = document.getElementById("animated-words");
-
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
 function typeEffect() {
+  const el = document.getElementById("animated-words");
+  if (!el) return; // Prevent error if element not found
+
   const currentWord = words[wordIndex];
   const displayedText = currentWord.substring(0, charIndex);
   el.innerText = displayedText;
@@ -26,11 +27,15 @@ function typeEffect() {
 
 typeEffect();
 
+// Run after DOM is fully loaded
+document.addEventListener("DOMContentLoaded", typeEffect);
 // Footer year
-document.addEventListener("DOMContentLoaded", () => {
-  const footerYear = document.getElementById("footer-year");
-  if (footerYear) {
-    footerYear.textContent = new Date().getFullYear();
+function updateFooterYear() {
+  const yearElement = document.getElementById("footer-year");
+  if (yearElement) {
+    yearElement.innerText = new Date().getFullYear();
   }
-});
+}
 
+// Call the function once DOM is ready
+document.addEventListener("DOMContentLoaded", updateFooterYear);
