@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blogs</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-  <div class="navbar-brand">Sanjay Thakur</div>
-  <ul class="navbar-menu">
-    <li><a href="index.html" class="active">Home</a></li>
-<!--    <li><a href="skills.html">Skills</a></li>-->
-<!--    <li><a href="experience.html">Experience</a></li>-->
-<!--    <li><a href="blogs.html">Blogs</a></li>-->
-  </ul>
+    <div class="navbar-brand">Sanjay Thakur</div>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <!--    <li><a href="skills.html">Skills</a></li>-->
+      <!--    <li><a href="experience.html">Experience</a></li>-->
+      <li><a href="blogs.html" class="active">Blogs</a></li>
+    </ul>
   </nav>
-  <div class="coming-soon">
-    <h3>🚧 Coming Soon</h3>
-    <footer>
+  <main class="main-content">
+    <div class="container">
+      <h2 class="section-title">Latest Blogs</h2>
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <article class="blog-card">
+          <img src="https://miro.medium.com/v2/resize:fit:1400/1*LaUcNHaqSSLFk5KdZd9cCg.png"
+            alt="Apache Druid Architecture" class="blog-thumbnail" />
+          <div class="blog-content">
+            <h3 class="blog-title">Making Apache Druid Query Requests Observable with Kafka Emitter</h3>
+            <p class="blog-excerpt">
+              Apache Druid is built for high-performance, real-time analytics. But when users start saying “queries are
+              slow”, one of the hardest questions to answer is where exactly the bottleneck lies.
+            </p>
+            <a href="https://medium.com/@sanjayk9r/making-apache-druid-query-requests-observable-with-kafka-emitter-aa2aec021088"
+              target="_blank" class="blog-link">Read on Medium &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer>
     &copy; <span id="footer-year"></span> Sanjay Thakur. All rights reserved.
   </footer>
 
   <script src="js/script.js"></script>
 </body>
+
 </html>

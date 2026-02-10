@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 * {
@@ -19,7 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 80px; /* navbar height */
+  padding-top: 80px;
+  /* navbar height */
 }
 
 /* Main content should take all remaining space */
@@ -122,8 +122,13 @@ h2 {
 }
 
 @keyframes blinkCursor {
-  from { border-right-color: black; }
-  to { border-right-color: transparent; }
+  from {
+    border-right-color: black;
+  }
+
+  to {
+    border-right-color: transparent;
+  }
 }
 
 .buttons {
@@ -144,10 +149,22 @@ h2 {
   text-align: center;
 }
 
-.btn.blue { background-color: #4285f4; }
-.btn.green { background-color: #0f9d58; }
-.btn.yellow { background-color: #f4b400; color: #000; }
-.btn.red { background-color: #db4437; }
+.btn.blue {
+  background-color: #4285f4;
+}
+
+.btn.green {
+  background-color: #0f9d58;
+}
+
+.btn.yellow {
+  background-color: #f4b400;
+  color: #000;
+}
+
+.btn.red {
+  background-color: #db4437;
+}
 
 .social-icons {
   margin-top: 2rem;
@@ -176,8 +193,13 @@ h2 {
 }
 
 @media (min-width: 768px) {
-  .glitch { font-size: 2.5rem; }
-  .static-text { font-size: 1.2rem; }
+  .glitch {
+    font-size: 2.5rem;
+  }
+
+  .static-text {
+    font-size: 1.2rem;
+  }
 }
 
 footer {
@@ -214,7 +236,8 @@ footer {
   height: 4px;
   left: 0;
   bottom: -4px;
-  background-color: #007BFF; /* blue color */
+  background-color: #007BFF;
+  /* blue color */
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: right;
@@ -245,7 +268,7 @@ footer {
   background: #f9f9f9;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .skill-category h3 {
@@ -311,7 +334,7 @@ footer {
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   color: #333;
 }
 
@@ -347,12 +370,15 @@ footer {
 .timeline-item.red::before {
   color: #e74c3c;
 }
+
 .timeline-item.yellow::before {
   color: #f1c40f;
 }
+
 .timeline-item.blue::before {
   color: #3498db;
 }
+
 .timeline-item.green::before {
   color: #2ecc71;
 }
@@ -363,17 +389,20 @@ footer {
   color: #111;
   margin-bottom: 5px;
 }
+
 .timeline-item h4 {
   font-size: 16px;
   color: #555;
   margin-bottom: 10px;
 }
+
 .timeline-item .date {
   font-size: 14px;
   font-weight: bold;
   color: #888;
   margin-bottom: 10px;
 }
+
 .timeline-item p {
   font-size: 14px;
   line-height: 1.5;
@@ -399,4 +428,72 @@ footer {
   .timeline-item::before {
     left: 0;
   }
+}
+
+/* Blog Styles */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #222;
+  line-height: 1.4;
+}
+
+.blog-excerpt {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.blog-link {
+  display: inline-block;
+  color: #4285f4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.blog-link:hover {
+  color: #0d47a1;
+  text-decoration: underline;
 }
