@@ -25,8 +25,6 @@ function typeEffect() {
   }
 }
 
-typeEffect();
-
 // Run after DOM is fully loaded
 document.addEventListener("DOMContentLoaded", typeEffect);
 // Footer year
