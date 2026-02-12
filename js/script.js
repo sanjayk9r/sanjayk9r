@@ -35,5 +35,14 @@ function updateFooterYear() {
   }
 }
 
-// Call the function once DOM is ready
-document.addEventListener("DOMContentLoaded", updateFooterYear);
+// Navbar Toggle Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navbarMenu = document.querySelector(".navbar-menu");
+
+  if (mobileMenu && navbarMenu) {
+    mobileMenu.addEventListener("click", () => {
+      navbarMenu.classList.toggle("active");
+    });
+  }
+});
