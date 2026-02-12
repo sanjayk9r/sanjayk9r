@@ -45,7 +45,10 @@ body {
   z-index: 999;
 }
 
-.navbar-brand {
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:visited {
   font-weight: bold;
   font-size: 1.2rem;
   color: #222;
@@ -158,10 +161,7 @@ h2 {
   background-color: #0f9d58;
 }
 
-.btn.yellow {
-  background-color: #f4b400;
-  color: #000;
-}
+
 
 .btn.red {
   background-color: #db4437;
