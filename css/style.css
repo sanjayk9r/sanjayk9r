@@ -246,15 +246,25 @@ body {
 /* ============================================================
    Home / hero
    ============================================================ */
+.profile-ring {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 3px;
+  background: conic-gradient(
+    var(--g-blue)  0deg   120deg,
+    var(--g-red)   120deg 240deg,
+    var(--g-green) 240deg 360deg
+  );
+  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.22);
+}
+
 .profile-img {
   width: 132px;
   height: 132px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--bg);
-  box-shadow:
-    0 0 0 2px var(--g-blue),
-    0 8px 24px rgba(66, 133, 244, 0.22);
+  display: block;
 }
 
 .profile-caption {
@@ -432,9 +442,6 @@ footer {
   width: 3px;
   height: 100%;
   background: var(--g-blue);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform var(--transition);
 }
 
 .skill-category:nth-child(4n+1)::before { background: var(--g-blue); }
@@ -446,8 +453,6 @@ footer {
   border-color: var(--border-strong);
   transform: translateY(-2px);
 }
-
-.skill-category:hover::before { transform: scaleY(1); }
 
 .skill-category h3 {
   font-family: var(--font-mono);
