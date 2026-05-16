@@ -1,3 +1,26 @@
+// Theme toggle — persists explicit choice, otherwise follows system preference.
+(function applyStoredTheme() {
+  try {
+    const stored = localStorage.getItem("theme");
+    if (stored === "dark" || stored === "light") {
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+  } catch (_) { /* localStorage unavailable */ }
+})();
+
+function toggleTheme() {
+  const root = document.documentElement;
+  const current = root.getAttribute("data-theme");
+  let next;
+  if (current === "dark") next = "light";
+  else if (current === "light") next = "dark";
+  else {
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    next = systemDark ? "light" : "dark";
+  }
+  root.setAttribute("data-theme", next);
+  try { localStorage.setItem("theme", next); } catch (_) { /* ignore */ }
+}
 
 const words = ["Reliable", "Scalable", "Distributed"];
 let wordIndex = 0;
@@ -45,4 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
       navbarMenu.classList.toggle("active");
     });
   }
+
+  const themeToggleBtn = document.getElementById("theme-toggle");
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", toggleTheme);
+  }
+
+  updateFooterYear();
 });
